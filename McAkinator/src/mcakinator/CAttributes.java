@@ -15,7 +15,7 @@ public class CAttributes {
       private Boolean menu;
       private Boolean complements;
       private Boolean healthy;
-      private Boolean fried;
+      //private Boolean fried;
       private Boolean vegetables;
       private Boolean liquid;
 
@@ -55,6 +55,22 @@ public class CAttributes {
 //If No ShareBox
       private Boolean ballShape; // McBites
       private Boolean hasBone;// Alitas de pollo
-      //McNuggets
+      //ELSE McNuggets
+      
+// Main Course
+      private Boolean multipleMeat;
+      private Boolean isMcExtreme;
+      // IF McExtreme
+      private Boolean hasEgg; // IF multipleMeat Doble McExtreme BBQ Bourbon Huevo  ELSE McExtreme BBQ Bourbon Huevo
+      private Boolean multipleCheese; // IF multipleMeat Doble McExtreme Tres Quesos  ELSE McExtreme Tres Quesos
+      //ELSE IF multipleMeat  McExtreme Bacon Doble ELSE McExtreme Bacon
+      
+      //IF No McExtreme
+      private Boolean isMcCrispy;
+      private Boolean bbqSauce; // IF  McCrispy BBQ&Bacon
+      //ELSE McCrispy Original
+      
+      //IF No McExtreme AND No McCrispy normal Sandwiches
+      private Boolean flatBread; // McWrap chicken crujiente & Bacon
       
 }
