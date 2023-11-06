@@ -15,7 +15,6 @@ public class CAttributes {
       private Boolean menu;
       private Boolean complements;
       private Boolean healthy;
-      //private Boolean fried;
       private Boolean vegetables;
       private Boolean liquid;
 
@@ -25,9 +24,10 @@ public class CAttributes {
       private Boolean fruit; // Tiene Frutas
       private Boolean pie; // Tarta de manzana
       private Boolean multipleFruits; // Frutibrocheta
-      private Boolean sweet; // Melon
+      private Boolean hardSkin; //Melon Piña
       private Boolean acidic; // Piña
-            // Si no es acido y no es dulce es Manzana 
+            // If no acidic Melon
+      // IF No hardSkin es Manzana 
 // Helado
       private Boolean iceCream; // Helados
       private Boolean cone; // Cono de helado
@@ -58,19 +58,35 @@ public class CAttributes {
       //ELSE McNuggets
       
 // Main Course
+      // IF No vegetables  Chicken Burger Kids
+      
       private Boolean multipleMeat;
+      //private Boolean fried;
+      private Boolean hasCheese;
+      private Boolean bbqSauce; 
+      private Boolean multipleCheese;
+      
       private Boolean isMcExtreme;
       // IF McExtreme
-      private Boolean hasEgg; // IF multipleMeat Doble McExtreme BBQ Bourbon Huevo  ELSE McExtreme BBQ Bourbon Huevo
-      private Boolean multipleCheese; // IF multipleMeat Doble McExtreme Tres Quesos  ELSE McExtreme Tres Quesos
-      //ELSE IF multipleMeat  McExtreme Bacon Doble ELSE McExtreme Bacon
+      private Boolean hasEgg; //  IF multipleMeat Doble McExtreme BBQ Bourbon Huevo  ELSE McExtreme BBQ Bourbon Huevo
+      //  IF multipleMeat AND multipleCheese Doble McExtreme Tres Quesos  ELSE McExtreme Tres Quesos
+      // ELSE IF multipleMeat  McExtreme Bacon Doble ELSE McExtreme Bacon
       
-      //IF No McExtreme
+      // IF No McExtreme
       private Boolean isMcCrispy;
-      private Boolean bbqSauce; // IF  McCrispy BBQ&Bacon
-      //ELSE McCrispy Original
+      // IF  McCrispy AND bbqSauce BBQ&Bacon
+      // ELSE McCrispy Original
       
-      //IF No McExtreme AND No McCrispy normal Sandwiches
+      // IF No McExtreme AND No McCrispy normal Sandwiches
       private Boolean flatBread; // McWrap chicken crujiente & Bacon
+      // Has fish
+      private Boolean fish;
+      //  If has cheese Filete de Pescado
+      // ELSE McFish
+      
+      // Has Chiken
+      private Boolean chicken;
+      
+      // Else has meat
       
 }
