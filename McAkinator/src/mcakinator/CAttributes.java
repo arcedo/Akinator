@@ -41,7 +41,7 @@ public class CAttributes {
             //  NO IsRed Ensalada de la huerta
 // No Saludable
 // Potatoes
-      private Boolean isPotatoe;  // Potatoes
+      private Boolean isPotato;  // Potatoes
       private Boolean hasBaconAndCheese; // Top Fries Bacon & Cheese
       private Boolean hasSourCream; // McShaker Fries Sour Cream
             // If NO Bacon And Cheese AND no hasSourCream Normal Potatoes
@@ -58,12 +58,14 @@ public class CAttributes {
       //ELSE McNuggets
       
 // Main Course
-      // IF No vegetables  Chicken Burger Kids
-      
+// IF No vegetables  Chicken Burger Kids
+// ELSE
       private Boolean multipleMeat;
       //private Boolean fried;
+      private Boolean hasBacon;
       private Boolean hasCheese;
       private Boolean bbqSauce; 
+      private Boolean seedBread;
       private Boolean multipleCheese;
       
       private Boolean isMcExtreme;
@@ -84,9 +86,22 @@ public class CAttributes {
       //  If has cheese Filete de Pescado
       // ELSE McFish
       
-      // Has Chiken
+      // Has Chicken
       private Boolean chicken;
-      
+      // IF BBQ Chicken Burger BBQ
+      // ELSE 
+            //  IF cheese AND bacon CBO
+            // IF cheese Chicken & Cheese
+            // ELSE 
+                  //IF seed bread McPollo
+                  // ELSE Chicken Mayo TODO: Doble & Triple
       // Else has meat
-      
+      //IF Seed Bread 
+            //IF mostazaSauce Cuarto de Libra
+            //ELSE IF multipleMeat Cuarto de Libra Doble
+            //ELSE
+                  //IF multipleMeat Big Mac
+                  // ELSE McRoyal Deluxe
+      // ELSE IF hasVegetals Cheeseburger TODO: Doble & Triple
+      //ELSE Hamburguesa Happy Meal
 }
