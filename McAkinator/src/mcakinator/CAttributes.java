@@ -81,7 +81,15 @@ public class CAttributes {
       
       // IF No McExtreme AND No McCrispy normal Sandwiches
       private Boolean flatBread; // McWrap chicken crujiente & Bacon
-      // Has fish
+      
+      private Boolean salat;
+      //IF Salat
+      private Boolean mustard;
+      //if  has chicken Ensalada Chicken Honey Mustard
+      //ELSE Ensalada Honey Mustard
+      //IF No mustard AND chicken Ensalada Chicken César
+      //ELSE Ensalada César
+// Has fish
       private Boolean fish;
       //  If has cheese Filete de Pescado
       // ELSE McFish
@@ -95,7 +103,7 @@ public class CAttributes {
             // ELSE 
                   //IF seed bread McPollo
                   // ELSE Chicken Mayo TODO: Doble & Triple
-      // Else has meat
+// Else has meat
       //IF Seed Bread 
             //IF mostazaSauce Cuarto de Libra
             //ELSE IF multipleMeat Cuarto de Libra Doble
