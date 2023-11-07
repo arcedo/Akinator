@@ -25,7 +25,7 @@ public class CAttributes {
       private Boolean pie; // Tarta de manzana
       private Boolean multipleFruits; // Frutibrocheta
       private Boolean hardSkin; //Melon Piña
-      private Boolean acidic; // Piña
+      private Boolean sour; // Piña
             // If no acidic Melon
       // IF No hardSkin es Manzana 
 // Helado
