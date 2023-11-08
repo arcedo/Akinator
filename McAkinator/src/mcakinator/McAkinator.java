@@ -61,7 +61,22 @@ public class McAkinator {
       //Chicken
             new CProducts("Chiken Burger Kids", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
             new CProducts("Chiken Burger Kids", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
-      };    
+      };  
+
+      //QUESTIONS
+      public CQuestions[] questions = new CQuestions[]{
+            //MAIN QUESTIONS
+            new CQuestions("Are you thinking about a dessert?", QuestionType.LAST_COURSE, null),
+            new CQuestions("Are you thinking about a complement?", QuestionType.COMPLEMENT, null),
+            new CQuestions("Are you thinking about a main course?", QuestionType.MAIN_COURSE, null),
+            //SECONDARY QUESTIONS
+            new CQuestions("Is your product liquid?", null, Arrays.asList(QuestionAttribute.LIQUID)),
+            new CQuestions("Does your product contain vegetables?", null, Arrays.asList(QuestionAttribute.VEGETABLES)),
+            //LAST_COURSE QUESTIONS
+            new CQuestions("Your product is a fruit?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.FRUIT)),
+            new CQuestions("Your product contains multiple fruits?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.FRUIT, QuestionAttribute.MULTIPLE_FRUIT)),
+      };
+      
       /**
        * @param args the command line arguments
        */
