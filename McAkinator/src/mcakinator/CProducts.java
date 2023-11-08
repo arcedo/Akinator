@@ -54,7 +54,7 @@ enum ProductType {
        BBQ_SAUCE,
        SEED_BREAD,
        CESAR,
-       
+       BEEF
       // Add more attributes as needed
 }
 public class CProducts {
