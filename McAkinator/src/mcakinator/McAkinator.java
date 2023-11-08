@@ -53,11 +53,11 @@ public class McAkinator {
 //Main Course
       //Salad 
             //Cesar
-            new CProducts("Salad Chicken Cesar", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN,ProductAttribute.BACON.SALAD, ProductAttribute.CESAR)),
-            new CProducts("Salad Cesar", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BACON.SALAD, ProductAttribute.CESAR)),
+            new CProducts("Salad Chicken Cesar", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN,ProductAttribute.SALAD, ProductAttribute.CESAR)),
+            new CProducts("Salad Cesar", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.SALAD, ProductAttribute.CESAR)),
             //Honey Mustad
-            new CProducts("Salad Chicken Cesar", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN,ProductAttribute.BACON.SALAD, ProductAttribute.MUSTARD)),
-            new CProducts("Salad Chicken Cesar", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BACON.SALAD, ProductAttribute.MUSTARD)),
+            new CProducts("Salad Chicken Honey Mustad", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN,ProductAttribute.SALAD, ProductAttribute.MUSTARD)),
+            new CProducts("Salad Honey Mustad", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.SALAD, ProductAttribute.MUSTARD)),
       //Chicken
             new CProducts("Chiken Burger Kids", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
             new CProducts("Chiken Burger Kids", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
