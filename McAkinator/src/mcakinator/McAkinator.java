@@ -61,7 +61,41 @@ public class McAkinator {
       //Chicken
             new CProducts("Chiken Burger Kids", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
             new CProducts("Chiken Burger Kids", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
-      };    
+      };  
+
+      //QUESTIONS
+      public CQuestions[] primarySectionQuestions = new CQuestions[]{
+            //MAIN QUESTIONS
+            new CQuestions("Are you thinking about a dessert?", QuestionType.LAST_COURSE, null),
+            new CQuestions("Are you thinking about a complement?", QuestionType.COMPLEMENT, null),
+            new CQuestions("Are you thinking about a main course?", QuestionType.MAIN_COURSE, null),
+      };
+      
+      public CQuestions[] secondarySectionQuestions = new CQuestions[]{
+            //SECONDARY QUESTIONS
+            new CQuestions("Is your product liquid?", null, Arrays.asList(QuestionAttribute.LIQUID)),
+            new CQuestions("Does your product contain vegetables?", null, Arrays.asList(QuestionAttribute.VEGETABLES)),
+      };
+      
+      public CQuestions[] thirdSectionQuestions = new CQuestions[]{
+          //LAST COURSE PRODUCTS FIRST PRODUCT QUESTIONS
+          new CQuestions("Your product is a fruit?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.FRUIT)),
+          new CQuestions("Your product is an ice cream?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.ICE_CREAM)),
+          new CQuestions("Your product is red?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.RED)),
+      };
+      
+      public CQuestions[] forthSectionQuestions = new CQuestions[]{
+          //LAST_COURSE QUESTIONS
+                //CONTAIN FRUITS QUESTIONS 
+            new CQuestions("Your product contains multiple fruits?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.FRUIT, QuestionAttribute.MULTIPLE_FRUIT)),
+            new CQuestions("Your product is a pie?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.FRUIT, QuestionAttribute.PIE)),
+            new CQuestions("Your fruit has a hard skin?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.FRUIT, QuestionAttribute.HARD_SKIN)),
+            new CQuestions("Your fruit is sour?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.FRUIT,QuestionAttribute.SOUR)),
+                //ICE CREAM QUESTIONS
+            new CQuestions("Is your ice cream in a cone?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.ICE_CREAM, QuestionAttribute.CONE)),
+            new CQuestions("Is your ice cream for people with celiac disease?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.ICE_CREAM, QuestionAttribute.CELIAC)), 
+      };
+      
       /**
        * @param args the command line arguments
        */
