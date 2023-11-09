@@ -39,6 +39,7 @@ enum QuestionAttribute {
     BALL_SHAPED,
     MULTIPLE_MEAT,
     MULTIPLE_CHEESE,
+    DIFERENT_CHEESE,
     MCEXTREME,
     EGG,
     MCCRISPY,
