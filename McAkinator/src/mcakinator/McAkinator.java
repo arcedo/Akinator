@@ -59,7 +59,20 @@ public class McAkinator {
             new CProducts("Salad Honey Mustad", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES,ProductAttribute.SALAD, ProductAttribute.MUSTARD)),
       //Chicken
             new CProducts("Chiken Burger Kids", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
-            new CProducts("Chiken Burger Kids", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
+
+        // BURGIR
+              new CProducts("Big Mac", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.CHEESE,ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_PRODUCTS, ProductAttribute.SEED_BREAD)),
+              new CProducts("MCRoyal Deluxe", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD)),
+              new CProducts("Cuarto de Libra", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD)),
+              new CProducts("Cuarto de Libra Doble", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD)),
+              new CProducts("McPollo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD)),
+              new CProducts("CBO", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BACON, ProductAttribute.SEED_BREAD)),
+              new CProducts("McCrispy Original", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCCRISPY, ProductAttribute.VEGETABLES, ProductAttribute.CHICKEN, ProductAttribute.CHEESE)),
+              new CProducts("McCrispy BBQ&Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCCRISPY, ProductAttribute.BACON, ProductAttribute.CHICKEN, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES)),
+              new CProducts("McExtreme Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD)),
+              new CProducts("McExtreme Bacon Double", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.SEED_BREAD)),
+              new CProducts("McExtreme Tres Quesos", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE,ProductAttribute.BEEF ,ProductAttribute.SEED_BREAD)),
+              new CProducts("Doble McExtreme Tres Quesos", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT,ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE,ProductAttribute.BEEF ,ProductAttribute.SEED_BREAD)),
       };  
 
       //QUESTIONS
