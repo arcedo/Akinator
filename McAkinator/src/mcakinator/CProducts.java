@@ -15,6 +15,7 @@ enum ProductType {
       MAIN_COURSE,
       COMPLEMENT,
       LAST_COURSE,
+      UNSPECIFIED
       //MENU
 }
 
@@ -68,6 +69,12 @@ public class CProducts {
             this.attributes=attributes;
       }
       
+      public CProducts() {
+            this.name = "";
+            this.type=ProductType.UNSPECIFIED;
+            this.attributes=new ArrayList<>();
+      }
+      
       public String getName() {
             return name;
       }
@@ -76,6 +83,21 @@ public class CProducts {
             this.name = name;
       }
 
+      public void setType(ProductType type) {
+        this.type = type;
+      }
+      
+      public ProductType getType() {
+        return type;
+      }
+      
+      public List<ProductAttribute> getAttributes() {
+          if (attributes == null) {
+            attributes = new ArrayList<>();
+        }
+        return attributes;
+    }
+      
       public void addAttribute(ProductAttribute attribute) {
             attributes.add(attribute);
       }
@@ -87,4 +109,12 @@ public class CProducts {
       public boolean hasAttribute(ProductAttribute attribute) {
             return attributes.contains(attribute);
       }
+      
+      public String toString() {
+        return "CProducts{" +
+                "name='" + name + '\'' +
+                ", type=" + type +
+                ", attributes=" + attributes +
+                '}';
+    }
 }
