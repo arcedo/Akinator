@@ -36,7 +36,7 @@ public class CQuestions {
     }
 
     public List<ProductAttribute> getAttributes() {
-          if (attributes == null) {
+        if (attributes == null) {
             attributes = new ArrayList<>();
         }
         return attributes;
