@@ -19,7 +19,7 @@ public class McAkinator {
             new CProducts("Danonino", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.LIQUID)),
       //FRUTA
             new CProducts("Apple Pie", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT,ProductAttribute.PIE)),
-            new CProducts("Frutibrocheta", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT,ProductAttribute.MULTIPLE_FRUIT)),
+            new CProducts("Frutibrocheta", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT,ProductAttribute.MULTIPLE_PRODUCTS)),
             new CProducts("Melon", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT,ProductAttribute.HARD_SKIN)),
             new CProducts("Pine", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT,ProductAttribute.HARD_SKIN, ProductAttribute.SOUR)),
             new CProducts("Apple", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT)),
@@ -75,6 +75,10 @@ public class McAkinator {
             //SECONDARY QUESTIONS
             new CQuestions("Is your product liquid?", null, Arrays.asList(QuestionAttribute.LIQUID)),
             new CQuestions("Does your product contain vegetables?", null, Arrays.asList(QuestionAttribute.VEGETABLES)),
+            new CQuestions("Has bacon?", QuestionType.COMPLEMENT, Arrays.asList( QuestionAttribute.BACON)),
+            new CQuestions("Has bacon?", QuestionType.COMPLEMENT, Arrays.asList( QuestionAttribute.CHEESE)),
+            new CQuestions("Is sour?", QuestionType.COMPLEMENT, Arrays.asList(QuestionAttribute.SOUR)),
+            new CQuestions("It has multiple products?", QuestionType.COMPLEMENT, Arrays.asList(QuestionAttribute.MULTIPLE_PRODUCTS)),
       };
       
       public CQuestions[] thirdSectionQuestions = new CQuestions[]{
@@ -102,7 +106,7 @@ public class McAkinator {
             new CQuestions("Your product contains multiple fruits?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.FRUIT, QuestionAttribute.MULTIPLE_FRUIT)),
             new CQuestions("Your product is a pie?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.FRUIT, QuestionAttribute.PIE)),
             new CQuestions("Your fruit has a hard skin?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.FRUIT, QuestionAttribute.HARD_SKIN)),
-            new CQuestions("Your fruit is sour?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.FRUIT,QuestionAttribute.SOUR)),
+            //new CQuestions("Your fruit is sour?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.FRUIT,QuestionAttribute.SOUR)),
             //Ice cream
             new CQuestions("Is your ice cream in a cone?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.ICE_CREAM, QuestionAttribute.CONE)),
             new CQuestions("Is your ice cream for people with celiac disease?", QuestionType.LAST_COURSE, Arrays.asList(QuestionAttribute.ICE_CREAM, QuestionAttribute.CELIAC)), 
@@ -115,15 +119,13 @@ public class McAkinator {
             new CQuestions("It has bones?", QuestionType.COMPLEMENT, Arrays.asList(QuestionAttribute.CHICKEN, QuestionAttribute.BONE)),
       };
       
-      public CQuestions[] fivethSectionQuestions = new CQuestions[]{
+      /*public CQuestions[] fivethSectionQuestions = new CQuestions[]{
       //Complements
             //Potato
-            new CQuestions("Has bacon & cheese?", QuestionType.COMPLEMENT, Arrays.asList(QuestionAttribute.POTATO, QuestionAttribute.BACON,QuestionAttribute.CHEESE)),
-            new CQuestions("Is sour?", QuestionType.COMPLEMENT, Arrays.asList(QuestionAttribute.POTATO, QuestionAttribute.SOUR)),
             //Chicken
-            new CQuestions("It has multiple products?", QuestionType.COMPLEMENT, Arrays.asList(QuestionAttribute.CHICKEN,QuestionAttribute.SHARE ,QuestionAttribute.MULTIPLE_PRODUCTS)),
+            //new CQuestions("It has multiple products?", QuestionType.COMPLEMENT, Arrays.asList(QuestionAttribute.CHICKEN,QuestionAttribute.SHARE ,QuestionAttribute.MULTIPLE_PRODUCTS)),
             
-      };
+      };*/
       
       /**
        * @param args the command line arguments
