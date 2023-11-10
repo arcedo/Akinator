@@ -45,4 +45,8 @@ public class CQuestions {
     public void setAttributes(List<ProductAttribute> attributes) {
         this.attributes = attributes;
     }
+
+    public boolean hasAttribute(ProductAttribute attribute) {
+            return attributes.contains(attribute);
+    }
 }
