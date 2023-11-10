@@ -190,6 +190,35 @@ public class McAkinator {
             return avitableList.toArray(new CProducts[avitableList.size()]);
       }
 
+      public static CQuestions[] aviableQuestions(CQuestions[] allQuestions, CProducts selectedAttributes, CProducts falseAttributes) {
+        List<CQuestions> avitableList = new ArrayList<>();
+        CQuestions[] filteredquestions = getQuestionsByType(allQuestions, selectedAttributes.getType());
+        for (CQuestions question : filteredquestions) {
+            boolean hasSelectedAttributes = true;
+            boolean hasNotAttributes = false;
+
+            // Check selectedAttributes
+            for (ProductAttribute attribute : selectedAttributes.getAttributes()) {
+                if (!question.hasAttribute(attribute)) {
+                    hasSelectedAttributes = false;
+                    break;
+                }
+            }
+
+            // Check notAttributes
+            for (ProductAttribute attribute : falseAttributes.getAttributes()) {
+                if (question.hasAttribute(attribute)) {
+                    hasNotAttributes = true;
+                    break;
+                }
+            }
+
+            // Include the product in the result array if it has selectedAttributes and does not have notAttributes
+            if (hasSelectedAttributes && !hasNotAttributes) {
+                avitableList.add(question);
+            }
+      }
+      
       public static void showQuest(CQuestions[] questions, boolean selectLastQuest) {
             Scanner scanner = new Scanner(System.in);
 
