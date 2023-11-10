@@ -49,4 +49,11 @@ public class CQuestions {
     public boolean hasAttribute(ProductAttribute attribute) {
             return attributes.contains(attribute);
     }
+    public String toString() {
+        return "CQuestions{" +
+                "name='" + questionString + '\'' +
+                ", type=" + type +
+                ", attributes=" + attributes +
+                '}';
+    }
 }

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ProjecteMICRO01_Akinator {
+public class McAkinator {
 
       public static CProducts[] products = new CProducts[]{
             //Last Course
@@ -36,13 +36,13 @@ public class ProjecteMICRO01_Akinator {
             new CProducts("Gazpacho", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.RED, ProductAttribute.LIQUID, ProductAttribute.VEGETABLES)),
             //Potatoes
             //Normal Fries
-            new CProducts("Potato Fries", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO)),
-            new CProducts("Top Fries Bacon & Cheese", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.CHEESE, ProductAttribute.BACON)),
-            new CProducts("McShaker Fries Sour Cream", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.SOUR)),
+            new CProducts("Potato Fries", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.VEGETABLES)),
+            new CProducts("Top Fries Bacon & Cheese", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.CHEESE, ProductAttribute.BACON, ProductAttribute.VEGETABLES)),
+            new CProducts("McShaker Fries Sour Cream", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.SOUR, ProductAttribute.VEGETABLES)),
             //Deluxe Fries
-            new CProducts("Potato Fries", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.DELUXE)),
-            new CProducts("Top Fries Bacon & Cheese", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.CHEESE, ProductAttribute.BACON, ProductAttribute.DELUXE)),
-            new CProducts("McShaker Fries Sour Cream", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.SOUR, ProductAttribute.DELUXE)),
+            new CProducts("Potato Fries", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.DELUXE, ProductAttribute.VEGETABLES)),
+            new CProducts("Top Fries Bacon & Cheese", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.CHEESE, ProductAttribute.BACON, ProductAttribute.DELUXE, ProductAttribute.VEGETABLES)),
+            new CProducts("McShaker Fries Sour Cream", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.SOUR, ProductAttribute.DELUXE, ProductAttribute.VEGETABLES)),
             //Chicken 
             new CProducts("ShareBox 25 McNuggets", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.SHARE, ProductAttribute.CHICKEN)),
             new CProducts("ShareBox 10 McNuggets y 10 alitas de pollo", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.SHARE, ProductAttribute.MULTIPLE_PRODUCTS, ProductAttribute.CHICKEN)),
@@ -59,52 +59,48 @@ public class ProjecteMICRO01_Akinator {
             new CProducts("Salad Honey Mustad", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES, ProductAttribute.SALAD, ProductAttribute.MUSTARD)),
             //Chicken
             new CProducts("Chiken Burger Kids", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
-      
-        // BURGIR
+            // BURGIR
             //ALL THE HAMBURGERS MUST HAVE BEEF, CHICKEN OR FISH AND MOST OF THEM MAY HAVE VEGETABLES, CHEESE AND SEED_BREAD.
-              new CProducts("Big Mac", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.CHEESE,ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_PRODUCTS, ProductAttribute.SEED_BREAD)),
-              new CProducts("MCRoyal Deluxe", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD)),
-              new CProducts("Cuarto de Libra", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD)),
-              new CProducts("Cuarto de Libra Doble", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD)),
-              new CProducts("McPollo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD)),
-              new CProducts("CBO", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BACON, ProductAttribute.SEED_BREAD)),
-              new CProducts("McCrispy Original", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCCRISPY, ProductAttribute.VEGETABLES, ProductAttribute.CHICKEN, ProductAttribute.CHEESE)),
-              new CProducts("McCrispy BBQ&Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCCRISPY, ProductAttribute.BACON, ProductAttribute.CHICKEN, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES)),
-              new CProducts("McExtreme Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD)),
-              new CProducts("McExtreme Bacon Double", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.SEED_BREAD)),
-              new CProducts("McExtreme Tres Quesos", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE,ProductAttribute.BEEF ,ProductAttribute.SEED_BREAD)),
-              new CProducts("Doble McExtreme Tres Quesos", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT,ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE,ProductAttribute.BEEF ,ProductAttribute.SEED_BREAD)),
-              new CProducts("McExtreme BBQ Bourbon Huevo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BEEF, ProductAttribute.EGG, ProductAttribute.BBQ_SAUCE)),
-              new CProducts("Doble McExtreme BBQ Bourbon Huevo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.EGG, ProductAttribute.BBQ_SAUCE)),
-              new CProducts("Hamburguesa Happy Meal", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD)),
-              new CProducts("Cheeseburger", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE)),
-              // DOUBLE AND TRIPLE CHEESE BURGUER ARE THE SAME.
-              //new CProducts("Double Cheeseburguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE,  ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE)),
-              //new CProducts("Triple Cheeseburguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE,  ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE)),
-              new CProducts("Chicken & Cheese", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.CHEESE,ProductAttribute.VEGETABLES, ProductAttribute.BBQ_SAUCE)),
-              new CProducts("McWrap Chicken crujiente & Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.FLAT_BREAD, ProductAttribute.CHICKEN, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.BACON)),
-      };  
+            new CProducts("Big Mac", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_PRODUCTS, ProductAttribute.SEED_BREAD)),
+            new CProducts("MCRoyal Deluxe", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD)),
+            new CProducts("Cuarto de Libra", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD)),
+            new CProducts("Cuarto de Libra Doble", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD)),
+            new CProducts("McPollo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD)),
+            new CProducts("CBO", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BACON, ProductAttribute.SEED_BREAD)),
+            new CProducts("McCrispy Original", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCCRISPY, ProductAttribute.VEGETABLES, ProductAttribute.CHICKEN, ProductAttribute.CHEESE)),
+            new CProducts("McCrispy BBQ&Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCCRISPY, ProductAttribute.BACON, ProductAttribute.CHICKEN, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES)),
+            new CProducts("McExtreme Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD)),
+            new CProducts("McExtreme Bacon Double", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.SEED_BREAD)),
+            new CProducts("McExtreme Tres Quesos", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD)),
+            new CProducts("Doble McExtreme Tres Quesos", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD)),
+            new CProducts("McExtreme BBQ Bourbon Huevo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BEEF, ProductAttribute.EGG, ProductAttribute.BBQ_SAUCE)),
+            new CProducts("Doble McExtreme BBQ Bourbon Huevo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.EGG, ProductAttribute.BBQ_SAUCE)),
+            new CProducts("Hamburguesa Happy Meal", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD)),
+            new CProducts("Cheeseburger", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE)),
+            // DOUBLE AND TRIPLE CHEESE BURGUER ARE THE SAME.
+            //new CProducts("Double Cheeseburguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE,  ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE)),
+            //new CProducts("Triple Cheeseburguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE,  ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE)),
+            new CProducts("Chicken & Cheese", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.BBQ_SAUCE)),
+            new CProducts("McWrap Chicken crujiente & Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.FLAT_BREAD, ProductAttribute.CHICKEN, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.BACON)),};
 
       //QUESTIONS
       public static CQuestions[] primarySectionQuestions = new CQuestions[]{
             //MAIN QUESTIONS
             new CQuestions("Are you thinking about a dessert?", ProductType.LAST_COURSE, null),
             new CQuestions("Are you thinking about a complement?", ProductType.COMPLEMENT, null),
-            new CQuestions("Are you thinking about a main course?", ProductType.MAIN_COURSE, null),
-      };
+            new CQuestions("Are you thinking about a main course?", ProductType.MAIN_COURSE, null),};
 
       //Esta podria ser la primera pregunta porque solo hay dos productos liquidos y sabiendo el type se puede adivinar
       public static CQuestions[] secondarySectionQuestions = new CQuestions[]{
             //SECONDARY QUESTIONS
             new CQuestions("Is your product liquid?", null, Arrays.asList(ProductAttribute.LIQUID)),
             new CQuestions("Does your product contain vegetables?", null, Arrays.asList(ProductAttribute.VEGETABLES)),
-            new CQuestions("Has bacon?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.BACON)),
-            new CQuestions("Has cheese?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHEESE)),
-            new CQuestions("Is sour?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.SOUR)),
-            new CQuestions("It has multiple products?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.MULTIPLE_PRODUCTS)),
-      };
+            new CQuestions("Has bacon?", null, Arrays.asList(ProductAttribute.BACON)),
+            new CQuestions("Has cheese?", null, Arrays.asList(ProductAttribute.CHEESE)),
+            new CQuestions("Is sour?", null, Arrays.asList(ProductAttribute.SOUR)),
+            new CQuestions("It has multiple products?", null, Arrays.asList(ProductAttribute.MULTIPLE_PRODUCTS)),};
 
-      public  static CQuestions[] thirdSectionQuestions = new CQuestions[]{
+      public static CQuestions[] thirdSectionQuestions = new CQuestions[]{
             //Last course
             // Solo hacer una pregunta de estas dos porque si no es una cosa es la otra
             new CQuestions("Your product is a fruit?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT)),
@@ -112,16 +108,15 @@ public class ProjecteMICRO01_Akinator {
             // Complements
             new CQuestions("Your product is red?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.RED)),
             //Ponemos esta pregunta como secundaria?? Porque se repite con la de main course
-            new CQuestions("Your product is a salad?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.SALAD)),
-            new CQuestions("Your product has potato?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO)),
+            new CQuestions("Your product is a salad?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.SALAD, ProductAttribute.VEGETABLES)),
+            new CQuestions("Your product has potato?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.VEGETABLES)),
             new CQuestions("Your product has chicken?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN)),
             //Main course
-            new CQuestions("Your product is a salad?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.SALAD)),
+            new CQuestions("Your product is a salad?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.SALAD, ProductAttribute.VEGETABLES)),
             new CQuestions("The product has flat bread?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.FLAT_BREAD)),
             new CQuestions("The product contains chicken?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
             new CQuestions("The product contains fish?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.FISH)),
-            new CQuestions("The product contains beef?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF)),
-      };
+            new CQuestions("The product contains beef?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF)),};
 
       public static CQuestions[] forthSectionQuestions = new CQuestions[]{
             //Last course
@@ -135,16 +130,15 @@ public class ProjecteMICRO01_Akinator {
             new CQuestions("Is your ice cream for people with celiac disease?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.ICE_CREAM, ProductAttribute.CELIAC)),
             //Complements
             // Potato
-            new CQuestions("The potatoes are Deluxe?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.DELUXE)),
+            new CQuestions("The potatoes are Deluxe?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.DELUXE, ProductAttribute.VEGETABLES)),
             //Chicken
             new CQuestions("The product name has \"Share\"?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.SHARE)),
             new CQuestions("It is ball shaped?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.BALL_SHAPED)),
-            new CQuestions("It has bones?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.BONE)),
-      };
-      
+            new CQuestions("It has bones?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.BONE)),};
+
       public static CProducts selectedAttributes = new CProducts();
       public static CProducts notAttributes = new CProducts();
-      
+
       public static CProducts[] getProductsByType(CProducts[] allProducts, ProductType targetType) {
             List<CProducts> filteredProducts = new ArrayList<>();
 
@@ -159,21 +153,24 @@ public class ProjecteMICRO01_Akinator {
       }
 
       public static CQuestions[] getQuestionsByType(CQuestions[] allQuestions, ProductType targetType) {
-        List<CQuestions> filteredQuestions = new ArrayList<>();
+            List<CQuestions> filteredQuestions = new ArrayList<>();
 
-        for (CQuestions question : allQuestions) {
-            if (question.getType() == targetType) {
-                filteredQuestions.add(question);
+            if (targetType == ProductType.UNSPECIFIED) {
+                  filteredQuestions = Arrays.asList(allQuestions);
+            } else {
+                  for (CQuestions question : allQuestions) {
+                        if (question.getType() == targetType || question.getType() == null) {
+                              filteredQuestions.add(question);
+                        }
+                  }
             }
-        }
-
-        // Convert the List to an array
-        return filteredQuestions.toArray(new CQuestions[0]);
+            // Convert the List to an array
+            return filteredQuestions.toArray(new CQuestions[0]);
       }
-      
+
       public static CProducts[] avitableProducts(CProducts[] allProducts, CProducts selectedAttributes, CProducts notAttributes) {
             List<CProducts> avitableList = new ArrayList<>();
-            CProducts[] filteredProducts = getProductsByType(allProducts,selectedAttributes.getType());
+            CProducts[] filteredProducts = getProductsByType(allProducts, selectedAttributes.getType());
             for (CProducts product : filteredProducts) {
                   boolean hasSelectedAttributes = true;
                   boolean hasNotAttributes = false;
@@ -204,38 +201,44 @@ public class ProjecteMICRO01_Akinator {
             return avitableList.toArray(new CProducts[avitableList.size()]);
       }
 
-      public static CQuestions[] aviableQuestions(CQuestions[] allQuestions, CProducts selectedAttributes, CProducts falseAttributes) {
-        List<CQuestions> avitableList = new ArrayList<>();
-        CQuestions[] filteredquestions = getQuestionsByType(allQuestions, selectedAttributes.getType());
-        for (CQuestions question : filteredquestions) {
-            boolean hasSelectedAttributes = true;
-            boolean hasNotAttributes = false;
+      public static CQuestions[] aviableQuestions(CQuestions[] allQuestions, CProducts selectedAttributes, CProducts falseAttributes, boolean noFilter) {
+            List<CQuestions> avitableList = new ArrayList<>();
+            CQuestions[] filteredquestions = getQuestionsByType(allQuestions, selectedAttributes.getType());
+            if (noFilter == true) {
+                  for (CQuestions question : filteredquestions) {
+                        boolean hasSelectedAttributes = true;
+                        boolean hasNotAttributes = false;
 
-            // Check selectedAttributes
-            for (ProductAttribute attribute : selectedAttributes.getAttributes()) {
-                if (!question.hasAttribute(attribute)) {
-                    hasSelectedAttributes = false;
-                    break;
-                }
-            }
+                        // Check selectedAttributes
+                        for (ProductAttribute attribute : selectedAttributes.getAttributes()) {
+                              if (!question.hasAttribute(attribute)) {
+                                    hasSelectedAttributes = false;
+                                    break;
+                              }
+                        }
 
-            // Check notAttributes
-            for (ProductAttribute attribute : falseAttributes.getAttributes()) {
-                if (question.hasAttribute(attribute)) {
-                    hasNotAttributes = true;
-                    break;
-                }
-            }
+                        // Check notAttributes
+                        for (ProductAttribute attribute : falseAttributes.getAttributes()) {
+                              if (question.hasAttribute(attribute)) {
+                                    hasNotAttributes = true;
+                                    break;
+                              }
+                        }
 
-            // Include the product in the result array if it has selectedAttributes and does not have notAttributes
-            if (hasSelectedAttributes && !hasNotAttributes) {
-                avitableList.add(question);
+                        // Include the product in the result array if it has selectedAttributes and does not have notAttributes
+                        if (hasSelectedAttributes && !hasNotAttributes) {
+                              avitableList.add(question);
+                        }
+                  }
+            } else {
+                  avitableList=Arrays.asList(filteredquestions);
             }
-        }
-        return avitableList.toArray(new CQuestions[avitableList.size()]);
-    }
-      
-      public static void showQuest(CQuestions[] questions, boolean selectLastQuest) {
+            return avitableList.toArray(new CQuestions[avitableList.size()]);
+      }
+
+      static CQuestions[] avtQuestions;
+
+      public static void showQuest(CQuestions[] questions, boolean selectLastQuest, boolean filter) {
             Scanner scanner = new Scanner(System.in);
 
             // Generar un número aleatorio
@@ -245,7 +248,7 @@ public class ProjecteMICRO01_Akinator {
             boolean hasThis = true;
             do {
                   // Check if we asked all the questions minus one
-                  if (questionsDone.size() == questions.length - 1 && selectLastQuest==true) {
+                  if (questionsDone.size() == questions.length - 1 && selectLastQuest == true) {
                         for (CQuestions question : questions) {
                               if (!questionsDone.contains(question.getQuestionString())) {
                                     //selectedAttributes.setType(question.getType());
@@ -254,42 +257,46 @@ public class ProjecteMICRO01_Akinator {
                                     break;
                               }
                         }
-                  }
-                  else if(questionsDone.size() >= questions.length){
+                  } else if (questionsDone.size() >= questions.length) {
                         hasThis = false;
-                  }
-                  // Ask an other question
+                  } // Ask an other question
                   else {
+                        avtQuestions = aviableQuestions(questions, selectedAttributes, notAttributes, filter);
+                        System.out.println("Possible Questions" + Arrays.toString(avtQuestions));
                         // Rand number for the question
                         int numeroAleatorio;
                         do {
-                              numeroAleatorio = random.nextInt(questions.length);
-                        } while (questionsDone.contains(questions[numeroAleatorio].getQuestionString()));
+                              numeroAleatorio = random.nextInt(avtQuestions.length);
+                        } while (questionsDone.contains(avtQuestions[numeroAleatorio].getQuestionString()));
                         //do while the answer is not correct
                         boolean validAn = false;
                         do {
-                              System.out.println(questions[numeroAleatorio].getQuestionString());
+                              System.out.println(avtQuestions[numeroAleatorio].getQuestionString());
                               String answer = scanner.nextLine();
 
                               if (answer.toUpperCase().equals("Y")) {
                                     validAn = true;
-                                    insertAttibutes(questions[numeroAleatorio], selectedAttributes, notAttributes);
-                                    hasThis = false;
+                                    insertAttibutes(avtQuestions[numeroAleatorio], selectedAttributes, notAttributes);
+                                    if (selectLastQuest == true) {
+                                          hasThis = false;
+                                    }
                               } else if (answer.toUpperCase().equals("N")) {
-                                    insertAttibutes(questions[numeroAleatorio], notAttributes, selectedAttributes);
+                                    insertAttibutes(avtQuestions[numeroAleatorio], notAttributes, selectedAttributes);
                                     validAn = true;
                               }
-                              CProducts[] possibleProducts=avitableProducts(products, selectedAttributes, notAttributes);
-                              if(possibleProducts.length==1){
-                              System.out.println("Your product is "+possibleProducts[0].getName()+"!");
-                              //hasThis=false;
-                              System.exit(0);
+                              CProducts[] possibleProducts = avitableProducts(products, selectedAttributes, notAttributes);
+                              if (possibleProducts.length == 1) {
+                                    System.out.println("Your product is " + possibleProducts[0].getName() + "!");
+                                    //hasThis=false;
+                                    System.exit(0);
                               }
                         } while (validAn == false);
-                        questionsDone.add(questions[numeroAleatorio].getQuestionString());
+                        questionsDone.add(avtQuestions[numeroAleatorio].getQuestionString());
                   }
             } while (hasThis == true);
-      };
+      }
+
+      ;
 
       public static void insertAttibutes(CQuestions questions, CProducts attributes, CProducts alterAttributes) {
             // Types
@@ -304,13 +311,16 @@ public class ProjecteMICRO01_Akinator {
                         }
                   }
             }
-      };
+      }
+
+      ;
       
       public static void main(String[] args) {
             // TODO code application logic here
-            showQuest(primarySectionQuestions, true);
-            showQuest(secondarySectionQuestions, false);
-            showQuest(thirdSectionQuestions, false);
-            showQuest(forthSectionQuestions, false);
-      };
+            showQuest(primarySectionQuestions, true, true);
+            showQuest(thirdSectionQuestions, true, true);
+            showQuest(secondarySectionQuestions, false, true);
+            showQuest(forthSectionQuestions, false, true);
+      }
+;
 }
