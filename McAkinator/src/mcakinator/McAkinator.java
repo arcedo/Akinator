@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class McAkinator {
+public class ProjecteMICRO01_Akinator {
 
       public static CProducts[] products = new CProducts[]{
             //Last Course
@@ -141,6 +141,7 @@ public class McAkinator {
             new CQuestions("It is ball shaped?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.BALL_SHAPED)),
             new CQuestions("It has bones?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.BONE)),
       };
+      
       public static CProducts selectedAttributes = new CProducts();
       public static CProducts notAttributes = new CProducts();
       
@@ -230,7 +231,9 @@ public class McAkinator {
             if (hasSelectedAttributes && !hasNotAttributes) {
                 avitableList.add(question);
             }
-      }
+        }
+        return avitableList.toArray(new CQuestions[avitableList.size()]);
+    }
       
       public static void showQuest(CQuestions[] questions, boolean selectLastQuest) {
             Scanner scanner = new Scanner(System.in);
@@ -310,5 +313,4 @@ public class McAkinator {
             showQuest(thirdSectionQuestions, false);
             showQuest(forthSectionQuestions, false);
       };
-
 }
