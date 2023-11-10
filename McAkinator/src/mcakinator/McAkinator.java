@@ -156,6 +156,19 @@ public class McAkinator {
             // Convert the List to an array
             return filteredProducts.toArray(new CProducts[0]);
       }
+
+      public static CQuestions[] getQuestionsByType(CQuestions[] allQuestions, ProductType targetType) {
+        List<CQuestions> filteredQuestions = new ArrayList<>();
+
+        for (CQuestions question : allQuestions) {
+            if (question.getType() == targetType) {
+                filteredQuestions.add(question);
+            }
+        }
+
+        // Convert the List to an array
+        return filteredQuestions.toArray(new CQuestions[0]);
+      }
       
       public static CProducts[] avitableProducts(CProducts[] allProducts, CProducts selectedAttributes, CProducts notAttributes) {
             List<CProducts> avitableList = new ArrayList<>();
