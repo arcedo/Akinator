@@ -99,7 +99,7 @@ public class McAkinator {
             new CQuestions("Is your product liquid?", null, Arrays.asList(ProductAttribute.LIQUID)),
             new CQuestions("Does your product contain vegetables?", null, Arrays.asList(ProductAttribute.VEGETABLES)),
             new CQuestions("Has bacon?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.BACON)),
-            new CQuestions("Has bacon?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHEESE)),
+            new CQuestions("Has cheese?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHEESE)),
             new CQuestions("Is sour?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.SOUR)),
             new CQuestions("It has multiple products?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.MULTIPLE_PRODUCTS)),
       };
@@ -141,8 +141,6 @@ public class McAkinator {
             new CQuestions("It is ball shaped?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.BALL_SHAPED)),
             new CQuestions("It has bones?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.BONE)),
       };
-      
-      public static ArrayList<String> questionsDone = new ArrayList<>();
       public static CProducts selectedAttributes = new CProducts();
       public static CProducts notAttributes = new CProducts();
       
@@ -192,16 +190,17 @@ public class McAkinator {
             return avitableList.toArray(new CProducts[avitableList.size()]);
       }
 
-      public static void showQuest(CQuestions[] questions) {
+      public static void showQuest(CQuestions[] questions, boolean selectLastQuest) {
             Scanner scanner = new Scanner(System.in);
 
             // Generar un número aleatorio
             Random random = new Random();
+            ArrayList<String> questionsDone = new ArrayList<>();
 
             boolean hasThis = true;
             do {
                   // Check if we asked all the questions minus one
-                  if (questionsDone.size() == questions.length - 1) {
+                  if (questionsDone.size() == questions.length - 1 && selectLastQuest==true) {
                         for (CQuestions question : questions) {
                               if (!questionsDone.contains(question.getQuestionString())) {
                                     //selectedAttributes.setType(question.getType());
@@ -210,12 +209,16 @@ public class McAkinator {
                                     break;
                               }
                         }
-                  } // Ask an other question
+                  }
+                  else if(questionsDone.size() >= questions.length){
+                        hasThis = false;
+                  }
+                  // Ask an other question
                   else {
                         // Rand number for the question
                         int numeroAleatorio;
                         do {
-                              numeroAleatorio = random.nextInt(3);
+                              numeroAleatorio = random.nextInt(questions.length);
                         } while (questionsDone.contains(questions[numeroAleatorio].getQuestionString()));
                         //do while the answer is not correct
                         boolean validAn = false;
@@ -231,14 +234,14 @@ public class McAkinator {
                                     insertAttibutes(questions[numeroAleatorio], notAttributes, selectedAttributes);
                                     validAn = true;
                               }
-                        } while (validAn == false);
-                        questionsDone.add(questions[numeroAleatorio].getQuestionString());
-                        CProducts[] possibleProducts=avitableProducts(products, selectedAttributes, notAttributes);
-                        if(possibleProducts.length==1){
+                              CProducts[] possibleProducts=avitableProducts(products, selectedAttributes, notAttributes);
+                              if(possibleProducts.length==1){
                               System.out.println("Your product is "+possibleProducts[0].getName()+"!");
                               //hasThis=false;
                               System.exit(0);
-                        }
+                              }
+                        } while (validAn == false);
+                        questionsDone.add(questions[numeroAleatorio].getQuestionString());
                   }
             } while (hasThis == true);
       };
@@ -260,10 +263,10 @@ public class McAkinator {
       
       public static void main(String[] args) {
             // TODO code application logic here
-            showQuest(primarySectionQuestions);
-            showQuest(secondarySectionQuestions);
-            showQuest(thirdSectionQuestions);
-            showQuest(forthSectionQuestions);
+            showQuest(primarySectionQuestions, true);
+            showQuest(secondarySectionQuestions, false);
+            showQuest(thirdSectionQuestions, false);
+            showQuest(forthSectionQuestions, false);
       };
 
 }
