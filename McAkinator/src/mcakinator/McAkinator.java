@@ -16,40 +16,43 @@ import java.util.List;
 
 public class McAkinator {
 
-      public static CProducts[] products = new CProducts[]{
-            //Last Course
-            new CProducts("Danonino", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.LIQUID)),
+public static CProducts[] products = new CProducts[]{
+        //Last Course
+            new CProducts("Danonino", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.LIQUID, ProductAttribute.CELIAC, ProductAttribute.FRUIT)),
             //FRUTA
             new CProducts("Apple Pie", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.PIE)),
-            new CProducts("Frutibrocheta", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.MULTIPLE_PRODUCTS)),
-            new CProducts("Melon", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.HARD_SKIN)),
-            new CProducts("Pine", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.HARD_SKIN, ProductAttribute.SOUR)),
-            new CProducts("Apple", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT)),
+            new CProducts("Frutibrocheta", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.MULTIPLE_PRODUCTS, ProductAttribute.CELIAC)),
+            new CProducts("Melon", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.HARD_SKIN, ProductAttribute.CELIAC)),
+            new CProducts("Pineapple", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.HARD_SKIN, ProductAttribute.SOUR, ProductAttribute.CELIAC)),
+            new CProducts("Apple", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.CELIAC)),
             //Ice Cream
             new CProducts("Cone Ice Cream", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.ICE_CREAM, ProductAttribute.CONE)),
             new CProducts("Sundae", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.ICE_CREAM, ProductAttribute.CELIAC)),
             new CProducts("McFlurry", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.ICE_CREAM)),
-            //Complements
+            
+
+        //Complements
             //Healthy
-            new CProducts("Salad of the field", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.SALAD, ProductAttribute.VEGETABLES)),
-            new CProducts("Happy Cherritos", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.RED, ProductAttribute.VEGETABLES)),
-            new CProducts("Gazpacho", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.RED, ProductAttribute.LIQUID, ProductAttribute.VEGETABLES)),
+            new CProducts("Salad of the field", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.SALAD, ProductAttribute.VEGETABLES, ProductAttribute.CELIAC)),
+            new CProducts("Happy Cherritos", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.RED, ProductAttribute.VEGETABLES, ProductAttribute.CELIAC)),
+            new CProducts("Gazpacho", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.RED, ProductAttribute.LIQUID, ProductAttribute.VEGETABLES, ProductAttribute.CELIAC)),
             //Potatoes
             //Normal Fries
-            new CProducts("Potato Fries", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.VEGETABLES)),
-            new CProducts("Top Fries Bacon & Cheese", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.CHEESE, ProductAttribute.BACON, ProductAttribute.VEGETABLES)),
-            new CProducts("McShaker Fries Sour Cream", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.SOUR, ProductAttribute.VEGETABLES)),
+            new CProducts("Potato Fries", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.VEGETABLES, ProductAttribute.CELIAC)),
+            new CProducts("Top Fries Bacon & Cheese", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BACON, ProductAttribute.CELIAC)),
+            new CProducts("McShaker Fries Sour Cream", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.VEGETABLES,ProductAttribute.SOUR)),
             //Deluxe Fries
-            new CProducts("Potato Fries", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.DELUXE, ProductAttribute.VEGETABLES)),
-            new CProducts("Top Fries Bacon & Cheese", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.CHEESE, ProductAttribute.BACON, ProductAttribute.DELUXE, ProductAttribute.VEGETABLES)),
-            new CProducts("McShaker Fries Sour Cream", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.SOUR, ProductAttribute.DELUXE, ProductAttribute.VEGETABLES)),
+            new CProducts("Potato Fries Deluxe", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.DELUXE, ProductAttribute.VEGETABLES, ProductAttribute.CELIAC)),
+            new CProducts("Top Fries Bacon & Cheese Deluxe", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES,ProductAttribute.BACON, ProductAttribute.DELUXE)),
+            new CProducts("Fries Sour Cream", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.SOUR, ProductAttribute.VEGETABLES,ProductAttribute.DELUXE)),
             //Chicken 
             new CProducts("ShareBox 25 McNuggets", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.SHARE, ProductAttribute.CHICKEN)),
             new CProducts("ShareBox 10 McNuggets y 10 alitas de pollo", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.SHARE, ProductAttribute.MULTIPLE_PRODUCTS, ProductAttribute.CHICKEN)),
             new CProducts("McBites", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.BALL_SHAPED, ProductAttribute.CHICKEN)),
             new CProducts("Alitas de pollo", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.BONE, ProductAttribute.CHICKEN)),
             new CProducts("McNuggets", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN)),
-            //Main Course
+        
+        //Main Course
             //Salad 
             //Cesar
             new CProducts("Salad Chicken Cesar", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES, ProductAttribute.CHICKEN, ProductAttribute.SALAD, ProductAttribute.CESAR)),
@@ -57,31 +60,43 @@ public class McAkinator {
             //Honey Mustad
             new CProducts("Salad Chicken Honey Mustad", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES, ProductAttribute.CHICKEN, ProductAttribute.SALAD, ProductAttribute.MUSTARD)),
             new CProducts("Salad Honey Mustad", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES, ProductAttribute.SALAD, ProductAttribute.MUSTARD)),
-            //Chicken
-            new CProducts("Chiken Burger Kids", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
+      
             // BURGIR
             //ALL THE HAMBURGERS MUST HAVE BEEF, CHICKEN OR FISH AND MOST OF THEM MAY HAVE VEGETABLES, CHEESE AND SEED_BREAD.
-            new CProducts("Big Mac", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_PRODUCTS, ProductAttribute.SEED_BREAD)),
-            new CProducts("MCRoyal Deluxe", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD)),
-            new CProducts("Cuarto de Libra", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD)),
-            new CProducts("Cuarto de Libra Doble", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD)),
-            new CProducts("McPollo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD)),
-            new CProducts("CBO", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BACON, ProductAttribute.SEED_BREAD)),
-            new CProducts("McCrispy Original", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCCRISPY, ProductAttribute.VEGETABLES, ProductAttribute.CHICKEN, ProductAttribute.CHEESE)),
-            new CProducts("McCrispy BBQ&Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCCRISPY, ProductAttribute.BACON, ProductAttribute.CHICKEN, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES)),
-            new CProducts("McExtreme Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD)),
-            new CProducts("McExtreme Bacon Double", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.SEED_BREAD)),
-            new CProducts("McExtreme Tres Quesos", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD)),
-            new CProducts("Doble McExtreme Tres Quesos", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD)),
-            new CProducts("McExtreme BBQ Bourbon Huevo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BEEF, ProductAttribute.EGG, ProductAttribute.BBQ_SAUCE)),
-            new CProducts("Doble McExtreme BBQ Bourbon Huevo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.EGG, ProductAttribute.BBQ_SAUCE)),
-            new CProducts("Hamburguesa Happy Meal", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD)),
-            new CProducts("Cheeseburger", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE)),
-            // DOUBLE AND TRIPLE CHEESE BURGUER ARE THE SAME.
-            //new CProducts("Double Cheeseburguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE,  ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE)),
-            //new CProducts("Triple Cheeseburguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE,  ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE)),
-            new CProducts("Chicken & Cheese", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.BBQ_SAUCE)),
-            new CProducts("McWrap Chicken crujiente & Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.FLAT_BREAD, ProductAttribute.CHICKEN, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.BACON)),};
+               //BEEF
+              new CProducts("Big Mac", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.CHEESE,ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_PRODUCTS, ProductAttribute.SEED_BREAD, ProductAttribute.CELIAC)),
+              new CProducts("MCRoyal Deluxe", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.DELUXE, ProductAttribute.BEEF, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.CELIAC)),
+              new CProducts("Quarter Pounder", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD, ProductAttribute.CELIAC)),
+              new CProducts("Duoble Quarter Punder", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD, ProductAttribute.CELIAC)),
+              new CProducts("Happy Meal Burguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CELIAC)),
+              new CProducts("Cheeseburger", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE, ProductAttribute.CELIAC)),
+              // DOUBLE AND TRIPLE CHEESE BURGUER ARE THE SAME.
+              //new CProducts("Double Cheeseburguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE,  ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE, ProductAttribute.CELIAC)),
+              //new CProducts("Triple Cheeseburguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE,  ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE, ProductAttribute.CELIAC)),
+              new CProducts("McExtreme Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD, ProductAttribute.CELIAC)),
+              new CProducts("Double McExtreme Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.SEED_BREAD, ProductAttribute.CELIAC)),
+              new CProducts("McExtreme Three Cheeses", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE,ProductAttribute.BEEF ,ProductAttribute.SEED_BREAD)),
+              new CProducts("Duoble McExtreme Three Cheeses", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT,ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE,ProductAttribute.BEEF ,ProductAttribute.SEED_BREAD)),
+              new CProducts("McExtreme BBQ Bourbon Egg", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BEEF, ProductAttribute.EGG, ProductAttribute.BBQ_SAUCE)),
+              new CProducts("Duoble McExtreme BBQ Bourbon Egg", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.EGG, ProductAttribute.BBQ_SAUCE)),
+              
+                //CHICKEN
+              new CProducts("McChicken", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD)),
+              new CProducts("CBO", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BACON, ProductAttribute.SEED_BREAD)),
+              new CProducts("McCrispy Original", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCCRISPY, ProductAttribute.VEGETABLES, ProductAttribute.CHICKEN, ProductAttribute.CHEESE)),
+              new CProducts("McCrispy BBQ&Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCCRISPY, ProductAttribute.BACON, ProductAttribute.CHICKEN, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES)),
+              new CProducts("Chicken & Cheese", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.CHEESE,ProductAttribute.VEGETABLES, ProductAttribute.BBQ_SAUCE)),
+              new CProducts("McWrap Crispy Chicken & Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.FLAT_BREAD, ProductAttribute.CHICKEN, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.BACON)),
+              new CProducts("Chicken Burguer BBQ", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.BBQ_SAUCE)),
+              new CProducts("Chiken Burger Kids", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
+              new CProducts("Chicken Mayo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES)),
+              // DOUBLE AND TRIPLE CHIKEN MAYO ARE THE SAME
+              //new CProducts("Double Chicken Mayo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT)),
+              //new CProducts("Triple Chicken Mayo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT)),
+              //FISH
+              new CProducts("Filet-O-Fish", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.FISH, ProductAttribute.CHEESE)),
+              new CProducts("McFish", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.FISH, ProductAttribute.VEGETABLES)),
+      };  
 
       //QUESTIONS
       public static CQuestions[] primarySectionQuestions = new CQuestions[]{
