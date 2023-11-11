@@ -86,6 +86,7 @@ public class McAkinator {
         new CProducts("Chicken Burguer BBQ", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.BBQ_SAUCE)),
         new CProducts("Chiken Burger Kids", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
         new CProducts("Chicken Mayo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES)),
+        new CProducts("Doble/Triple Chicken Mayo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES,ProductAttribute.MULTIPLE_MEAT)),
         // DOUBLE AND TRIPLE CHIKEN MAYO ARE THE SAME
         //new CProducts("Double Chicken Mayo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT)),
         //new CProducts("Triple Chicken Mayo", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT)),
