@@ -6,7 +6,7 @@ package mcakinator;
 
 /**
  *
- * @author arcedo
+ * @author marcel y arcedo
  */
 import java.util.Random;
 import java.util.Scanner;
@@ -211,15 +211,18 @@ public class McAkinator {
         return avitableList.toArray(new CProducts[avitableList.size()]);
     }
 
-    public static CQuestions[] aviableQuestions(CQuestions[] allQuestions, CProducts selectedAttributes, CProducts falseAttributes, boolean noFilter) {
+    public static CQuestions[] aviableQuestionsV2(CQuestions[] allQuestions, CProducts selectedAttributes, CProducts falseAttributes, boolean filter1, boolean filter2, boolean filter3, boolean filter4) {
+        //PRIMERO CREAMOS DONDE ALMAZENAR LAS POSIBLES PREGUNTAS
         List<CQuestions> aviableList = new ArrayList<>();
         CQuestions[] filteredquestions = getQuestionsByType(allQuestions, selectedAttributes.getType());
         CProducts[] possibleProducts;
-        if (noFilter == true) {
+        //LLAMAMOS A QUE NOS DEN LOS POSIBLES PRODUCTOS
+        possibleProducts = aviableProducts(products, selectedAttributes, falseAttributes);
+
+        if (filter1 == true) {
             for (CQuestions question : filteredquestions) {
                 boolean hasSelectedAttributes = true;
                 boolean hasNotAttributes = false;
-                boolean hasAttributesProducts = true;
 
                 // Check selectedAttributes
                 for (ProductAttribute attribute : selectedAttributes.getAttributes()) {
@@ -236,31 +239,13 @@ public class McAkinator {
                         break;
                     }
                 }
-                
-                /*possibleProducts = aviableProducts(products, selectedAttributes, falseAttributes);
-                for(int i = 0; i < possibleProducts.length; i++)
-                {
-                    for (ProductAttribute attribute : possibleProducts[i].getAttributes()) {
-                        if(question.hasAttribute(attribute))
-                        {
-                            hasAttributesProducts = false;
-                            break;
-                        }
-                    }
-                    //System.out.println("Posible product " + i + ": " + possibleProducts[i].getName());
-                }*/
-                
-                possibleProducts = aviableProducts(products, selectedAttributes, falseAttributes);
-                for(int i = 0; i < possibleProducts.length; i++)
-                {
-                    System.out.println("Posible product " + i + ": " + possibleProducts[i].getName());
-                }
+
                 // Include the product in the result array if it has selectedAttributes and does not have notAttributes
-                if (hasSelectedAttributes == true && hasNotAttributes == false) {
+                if (hasSelectedAttributes && !hasNotAttributes) {
                     aviableList.add(question);
                 }
             }
-        } else {
+        } else if (filter2 == true) {
             for (CQuestions question : filteredquestions) {
                 boolean hasSelectedAttributes = false;
                 boolean hasNotAttributes = false;
@@ -281,108 +266,164 @@ public class McAkinator {
                         break;
                     }
                 }
+
                 possibleProducts = aviableProducts(products, selectedAttributes, falseAttributes);
-                for(int i = 0; i < possibleProducts.length; i++)
-                {
+                for (int i = 0; i < possibleProducts.length; i++) {
                     for (ProductAttribute attribute : possibleProducts[i].getAttributes()) {
-                        if(question.hasAttribute(attribute))
-                        {
+                        if (question.hasAttribute(attribute)) {
                             hasAttributesProducts = true;
                             break;
                         }
                     }
-                    //System.out.println("Posible product " + i + ": " + possibleProducts[i].getName());
-                    //if())
                 }
                 
                 // Include the product in the result array if it has selectedAttributes and does not have notAttributes
-                if (!hasSelectedAttributes && !hasNotAttributes) {
+                if (!hasSelectedAttributes && hasAttributesProducts) {
+                    aviableList.add(question);
+                }
+            }
+        } else if (filter3 == true) {
+            for (CQuestions question : filteredquestions) {
+                boolean hasSelectedAttributes = false;
+                boolean hasNotAttributes = false;
+                boolean hasAttributesProducts = false;
+
+                
+                // Check selectedAttributes
+                for (ProductAttribute attribute : selectedAttributes.getAttributes()) {
+                    if (question.hasAttribute(attribute)) {
+                        hasSelectedAttributes = true;
+                        break;
+                    }
+                }
+                possibleProducts = aviableProducts(products, selectedAttributes, falseAttributes);
+                for (int i = 0; i < possibleProducts.length; i++) {
+                    for (ProductAttribute attribute : possibleProducts[i].getAttributes()) {
+                        //System.out.println("Product Attribute: " + attribute);
+                        //System.out.println("Question attribute: " + question.getAttributes());
+                        if (question.hasAttribute(attribute)) {
+                            hasAttributesProducts = true;
+                            break;
+                        }
+                    }
+                }
+                
+                // Include the product in the result array if it has selectedAttributes and does not have notAttributes
+                if (!hasSelectedAttributes && hasAttributesProducts == true) {
+                    aviableList.add(question);
+                }
+            }
+        } else if (filter4 == true) {
+            for (CQuestions question : filteredquestions) {
+                boolean hasSelectedAttributes = false;
+                boolean hasNotAttributes = false;
+                boolean hasAttributesProducts = false;
+
+                
+                // Check selectedAttributes
+                for (ProductAttribute attribute : selectedAttributes.getAttributes()) {
+                    if (question.hasAttribute(attribute)) {
+                        hasSelectedAttributes = true;
+                        break;
+                    }
+                }
+
+                // Check notAttributes
+                for (ProductAttribute attribute : falseAttributes.getAttributes()) {
+                    if (question.hasAttribute(attribute)) {
+                        hasNotAttributes = true;
+                        break;
+                    }
+                }
+                    System.out.println("\n");
+                
+                possibleProducts = aviableProducts(products, selectedAttributes, falseAttributes);
+                for (int i = 0; i < possibleProducts.length; i++) {
+                    for (ProductAttribute attribute : possibleProducts[i].getAttributes()) {
+                        //System.out.println("Product Attribute: " + attribute);
+                        //System.out.println("Question attribute: " + question.getAttributes());
+                        if (question.hasAttribute(attribute)) {
+                            hasAttributesProducts = true;
+                            break;
+                        }
+                    }
+                }
+                
+                // Include the product in the result array if it has selectedAttributes and does not have notAttributes
+                if (hasSelectedAttributes == true) {
                     aviableList.add(question);
                 }
             }
         }
         return aviableList.toArray(new CQuestions[aviableList.size()]);
     }
-
-    public static void showQuestionV2(CQuestions[] questions, boolean firstQuestionVar, boolean thirdQuestionVar, boolean filter) {
-        //SCANNER
+    
+    public static void showQuestionV3(CQuestions[] questions, boolean filter1, boolean filter2, boolean filter3, boolean filter4) {
         Scanner scanner = new Scanner(System.in);
         // Generar un número aleatorio
         Random random = new Random();
-        //ARRAY DE PREGUNTAS HECHAS
         ArrayList<String> questionsDone = new ArrayList<>();
-        CProducts[] possibleProducts;
-        boolean hasThis = true;
 
-        //DoWhileOperacion
+        //Iniciamos primer buvle
+        boolean hasThis = true;
         do {
-            //VAMOS A DIVIDIR A PARTIR DE AQUI LA OPERACION
-            if (firstQuestionVar == true) {
-                if (questionsDone.size() == questions.length - 1) {
-                    for (CQuestions question : questions) {
-                        if (!questionsDone.contains(question.getQuestionString())) {
-                            //selectedAttributes.setType(question.getType());
-                            insertAttibutes(question, selectedAttributes, notAttributes);
-                            hasThis = false;
-                            break;
-                        }
+            avtQuestions = aviableQuestionsV2(questions, selectedAttributes, notAttributes, filter1, filter2, filter3, filter4);
+            // Check if we asked all the questions minus one
+            if (questionsDone.size() == questions.length - 1 && filter1 == true) {
+                for (CQuestions question : questions) {
+                    if (!questionsDone.contains(question.getQuestionString())) {
+                        //selectedAttributes.setType(question.getType());
+                        insertAttibutes(question, selectedAttributes, notAttributes);
+                        hasThis = false;
+                        break;
                     }
                 }
-            }
+            } else if (questionsDone.size() >= questions.length) {
+                hasThis = false;
+            } // Ask an other question
+            else if(avtQuestions.length >0) {
+                System.out.println("Possible Questions" + Arrays.toString(avtQuestions));
+                // Rand number for the question
+                int numeroAleatorio;
+                do {
+                    numeroAleatorio = random.nextInt(avtQuestions.length);
+                } while (questionsDone.contains(avtQuestions[numeroAleatorio].getQuestionString()));
 
-            avtQuestions = aviableQuestions(questions, selectedAttributes, notAttributes, filter);
-            //System.out.println("Possible Questions" + Arrays.toString(avtQuestions));
-            System.out.println(" - Size aviableQuestions: " + avtQuestions.length);
-            // Rand number for the question
-            int numeroAleatorio;
-            //Aqui hacemos de forma aleatoria que de las se calculepreguntas
-
-            do {
-                numeroAleatorio = random.nextInt(avtQuestions.length);
-            } while (questionsDone.contains(avtQuestions[numeroAleatorio].getQuestionString()) && avtQuestions.length > 1);
-
-            //do while the answer is not correct
-            boolean validAn = false;
-
-            do {
-                if (avtQuestions.length >= 2) {
-                    System.out.println(" - Numero aleatorio: " + numeroAleatorio);
-
-                    //System.out.println(" - Atributos Guardados: " + selectedAttributes);
-                    System.out.println("\n");
+                boolean validAn = false;
+                do {
                     System.out.println(avtQuestions[numeroAleatorio].getQuestionString());
                     String answer = scanner.nextLine();
-                    System.out.println("\n");
 
                     if (answer.toUpperCase().equals("Y")) {
                         validAn = true;
                         insertAttibutes(avtQuestions[numeroAleatorio], selectedAttributes, notAttributes);
-                        if (firstQuestionVar == true) {
+                        if (filter1 == true) {
                             hasThis = false;
                         }
                     } else if (answer.toUpperCase().equals("N")) {
                         insertAttibutes(avtQuestions[numeroAleatorio], notAttributes, selectedAttributes);
                         validAn = true;
                     }
-                    possibleProducts = aviableProducts(products, selectedAttributes, notAttributes);
-                    System.out.println(" - Possible Products: " + possibleProducts.length);
+                    CProducts[] possibleProducts = aviableProducts(products, selectedAttributes, notAttributes);
                     if (possibleProducts.length == 1) {
                         System.out.println("Your product is " + possibleProducts[0].getName() + "!");
                         //hasThis=false;
                         System.exit(0);
                     }
-                } else if (avtQuestions.length <= 1) {
-                    hasThis = false;
-                    validAn = true;
-                }
-            } while (validAn == false);
-            questionsDone.add(avtQuestions[numeroAleatorio].getQuestionString());
-            //questionsDone.add(avtQuestions[numeroAleatorio].getQuestionString());
+                } while (validAn == false);
+                questionsDone.add(avtQuestions[numeroAleatorio].getQuestionString());
+            }
+            else{
+                hasThis = false;
+                CProducts[] possibleProducts = aviableProducts(products, selectedAttributes, notAttributes);
+                    if (possibleProducts.length == 1) {
+                        System.out.println("Your product is " + possibleProducts[0].getName() + "!");
+                        //hasThis=false;
+                        System.exit(0);
+                    }
+            }
+
         } while (hasThis == true);
-    }
-
-    public static void showQuestForPrimaryState() {
-
     }
 
     //public static void showQuestForSecondaryState
@@ -405,10 +446,14 @@ public class McAkinator {
       
       public static void main(String[] args) {
         // TODO code application logic here
-        showQuestionV2(primarySectionQuestions, true, false, true);
-        showQuestionV2(secondarySectionQuestions, false, true, false);
-        showQuestionV2(thirdSectionQuestions, false, true, false);
-        showQuestionV2(forthSectionQuestions, false, true, false);
+        showQuestionV3(primarySectionQuestions, true, false, false, false);
+        System.out.println("\n secondary Section ------\n");
+        showQuestionV3(secondarySectionQuestions, false, true, false, false);
+        System.out.println("\nthird Section ------ \n");
+        showQuestionV3(thirdSectionQuestions, false, false, true, false);
+        System.out.println("\n Forth Section ------ \n");
+        showQuestionV3(forthSectionQuestions, false, false, false, true);
     }
 ;
 }
+
