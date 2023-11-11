@@ -66,7 +66,6 @@ public class McAkinator {
         new CProducts("Duoble Quarter Punder", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.CHEESE, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD, ProductAttribute.CELIAC)),
         new CProducts("Happy Meal Burguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CELIAC)),
         new CProducts("Cheeseburger", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE, ProductAttribute.CELIAC)),
-        new CProducts("Doble/Triple Cheeseburger", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE, ProductAttribute.MULTIPLE_MEAT,ProductAttribute.MULTIPLE_CHEESE,ProductAttribute.CELIAC)),
         // DOUBLE AND TRIPLE CHEESE BURGUER ARE THE SAME.
         new CProducts("Double or Triple Cheeseburguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE,  ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE, ProductAttribute.CELIAC)),
         //new CProducts("Triple Cheeseburguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE,  ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE, ProductAttribute.CELIAC)),
@@ -236,8 +235,12 @@ public class McAkinator {
             CQuestions[] filteredquestions = getQuestionsByType(allQuestions, selectedAttributes.getType());
             CProducts[] possibleProducts;
             //LLAMAMOS A QUE NOS DEN LOS POSIBLES PRODUCTOS
+            
             possibleProducts = aviableProducts(products, selectedAttributes, falseAttributes);
-
+            for (int i = 0; i < possibleProducts.length; i++) {
+                System.out.println(" - " + i + ": " + possibleProducts[i].toString());
+            }
+            
             if (filter1 == true) {
                   for (CQuestions question : filteredquestions) {
                         boolean hasSelectedAttributes = true;
@@ -314,6 +317,7 @@ public class McAkinator {
                                     break;
                               }
                         }
+                        
                         possibleProducts = aviableProducts(products, selectedAttributes, falseAttributes);
                         for (int i = 0; i < possibleProducts.length; i++) {
                               for (ProductAttribute attribute : possibleProducts[i].getAttributes()) {
@@ -367,7 +371,7 @@ public class McAkinator {
                         }
 
                         // Include the product in the result array if it has selectedAttributes and does not have notAttributes
-                        if (hasSelectedAttributes == true) {
+                        if (hasSelectedAttributes == true && hasAttributesProducts == true) {
                               aviableList.add(question);
                         }
                   }
