@@ -52,27 +52,28 @@ public class McAkinator {
         //Main Course
         //Salad 
         //Cesar
-        new CProducts("Salad Chicken Cesar", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES, ProductAttribute.CHICKEN, ProductAttribute.SALAD, ProductAttribute.CESAR)),
-        new CProducts("Salad Cesar", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES, ProductAttribute.SALAD, ProductAttribute.CESAR)),
+        new CProducts("Salad Chicken Cesar", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES, ProductAttribute.CHICKEN, ProductAttribute.SALAD, ProductAttribute.CESAR, ProductAttribute.CHEESE)),
+        new CProducts("Salad Cesar", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES, ProductAttribute.SALAD, ProductAttribute.CESAR,ProductAttribute.CHEESE)),
         //Honey Mustad
-        new CProducts("Salad Chicken Honey Mustad", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES, ProductAttribute.CHICKEN, ProductAttribute.SALAD, ProductAttribute.MUSTARD)),
-        new CProducts("Salad Honey Mustad", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES, ProductAttribute.SALAD, ProductAttribute.MUSTARD)),
+        new CProducts("Salad Chicken Honey Mustad", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES, ProductAttribute.CHICKEN, ProductAttribute.SALAD, ProductAttribute.MUSTARD,ProductAttribute.CHEESE)),
+        new CProducts("Salad Honey Mustad", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.VEGETABLES, ProductAttribute.SALAD, ProductAttribute.MUSTARD,ProductAttribute.CHEESE)),
         // BURGIR
         //ALL THE HAMBURGERS MUST HAVE BEEF, CHICKEN OR FISH AND MOST OF THEM MAY HAVE VEGETABLES, CHEESE AND SEED_BREAD.
         //BEEF
-        new CProducts("Big Mac", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_PRODUCTS, ProductAttribute.SEED_BREAD, ProductAttribute.CELIAC)),
+        new CProducts("Big Mac", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.SEED_BREAD, ProductAttribute.CELIAC)),
         new CProducts("MCRoyal Deluxe", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.DELUXE, ProductAttribute.BEEF, ProductAttribute.CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.CELIAC)),
         new CProducts("Quarter Pounder", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD, ProductAttribute.CELIAC)),
         new CProducts("Duoble Quarter Punder", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.VEGETABLES, ProductAttribute.SEED_BREAD, ProductAttribute.MUSTARD, ProductAttribute.CELIAC)),
         new CProducts("Happy Meal Burguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CELIAC)),
         new CProducts("Cheeseburger", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE, ProductAttribute.CELIAC)),
+        new CProducts("Doble/Triple Cheeseburger", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE, ProductAttribute.MULTIPLE_MEAT,ProductAttribute.MULTIPLE_CHEESE,ProductAttribute.CELIAC)),
         // DOUBLE AND TRIPLE CHEESE BURGUER ARE THE SAME.
         //new CProducts("Double Cheeseburguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE,  ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE, ProductAttribute.CELIAC)),
         //new CProducts("Triple Cheeseburguer", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE,  ProductAttribute.VEGETABLES, ProductAttribute.MUSTARD, ProductAttribute.CHEESE, ProductAttribute.CELIAC)),
-        new CProducts("McExtreme Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD, ProductAttribute.CELIAC)),
-        new CProducts("Double McExtreme Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.SEED_BREAD, ProductAttribute.CELIAC)),
-        new CProducts("McExtreme Three Cheeses", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD)),
-        new CProducts("Duoble McExtreme Three Cheeses", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD)),
+        new CProducts("McExtreme Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE,ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD, ProductAttribute.CELIAC)),
+        new CProducts("Double McExtreme Bacon", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE,ProductAttribute.MULTIPLE_MEAT, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.SEED_BREAD, ProductAttribute.CELIAC)),
+        new CProducts("McExtreme Three Cheeses", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES,ProductAttribute.CHEESE, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD)),
+        new CProducts("Duoble McExtreme Three Cheeses", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES,ProductAttribute.CHEESE, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.MULTIPLE_CHEESE, ProductAttribute.DIFERENT_CHEESE, ProductAttribute.BEEF, ProductAttribute.SEED_BREAD)),
         new CProducts("McExtreme BBQ Bourbon Egg", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BEEF, ProductAttribute.EGG, ProductAttribute.BBQ_SAUCE)),
         new CProducts("Duoble McExtreme BBQ Bourbon Egg", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MCEXTREME, ProductAttribute.BACON, ProductAttribute.VEGETABLES, ProductAttribute.CHEESE, ProductAttribute.BEEF, ProductAttribute.MULTIPLE_MEAT, ProductAttribute.EGG, ProductAttribute.BBQ_SAUCE)),
         //CHICKEN
@@ -102,48 +103,67 @@ public class McAkinator {
     //Esta podria ser la primera pregunta porque solo hay dos productos liquidos y sabiendo el type se puede adivinar
     public static CQuestions[] secondarySectionQuestions = new CQuestions[]{
         //SECONDARY QUESTIONS
-        new CQuestions("Is your product liquid?", null, Arrays.asList(ProductAttribute.LIQUID)),
+        new CQuestions("Does your product have a liquid consistency?", null, Arrays.asList(ProductAttribute.LIQUID)),
         new CQuestions("Does your product contain vegetables?", null, Arrays.asList(ProductAttribute.VEGETABLES)),
-        new CQuestions("Has bacon?", null, Arrays.asList(ProductAttribute.BACON)),
-        new CQuestions("Has cheese?", null, Arrays.asList(ProductAttribute.CHEESE)),
-        new CQuestions("Is sour?", null, Arrays.asList(ProductAttribute.SOUR)),
-        new CQuestions("It has multiple products?", null, Arrays.asList(ProductAttribute.MULTIPLE_PRODUCTS)),};
+        new CQuestions("Does it have bacon?", null, Arrays.asList(ProductAttribute.BACON)),
+        new CQuestions("Does it have cheese?", null, Arrays.asList(ProductAttribute.CHEESE)),
+        new CQuestions("Is the product sour?", null, Arrays.asList(ProductAttribute.SOUR)),
+        new CQuestions("Does it include multiple products?", null, Arrays.asList(ProductAttribute.MULTIPLE_PRODUCTS)),
+        new CQuestions("Is your product for people with celiac disease?", null, Arrays.asList(ProductAttribute.CELIAC)),
+        new CQuestions("Does it include multiple slices of meat?", null, Arrays.asList(ProductAttribute.MULTIPLE_MEAT)),
+        new CQuestions("Does it have egg?", null, Arrays.asList(ProductAttribute.EGG)),
+        new CQuestions("Does it include different types of cheese?", null, Arrays.asList(ProductAttribute.DIFERENT_CHEESE)),
+    };
 
     public static CQuestions[] thirdSectionQuestions = new CQuestions[]{
         //Last course
         // Solo hacer una pregunta de estas dos porque si no es una cosa es la otra
-        new CQuestions("Your product is a fruit?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT)),
-        new CQuestions("Your product is an ice cream?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.ICE_CREAM)),
+        new CQuestions("Is your product a fruit?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT)),
+        new CQuestions("Is your product an ice cream?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.ICE_CREAM)),
         // Complements
-        new CQuestions("Your product is red?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.RED)),
+        new CQuestions("Is your product red?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.RED)),
         //Ponemos esta pregunta como secundaria?? Porque se repite con la de main course
-        new CQuestions("Your product is a salad?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.SALAD)),
-        new CQuestions("Your product has potato?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO)),
-        new CQuestions("Your product has chicken?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN)),
+        new CQuestions("Is your product a salad?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.SALAD)),
+        new CQuestions("Does your product have potatoes?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO)),
+        new CQuestions("Does your product have chicken?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN)),
         //Main course
-        new CQuestions("Your product is a salad?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.SALAD)),
-        new CQuestions("The product has flat bread?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.FLAT_BREAD)),
-        new CQuestions("The product contains chicken?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
-        new CQuestions("The product contains fish?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.FISH)),
-        new CQuestions("The product contains beef?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF)),};
+        new CQuestions("Is your product a salad?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.SALAD)),
+        new CQuestions("Does the product contain chicken?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN)),
+        new CQuestions("Does the product contain fish?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.FISH)),
+        new CQuestions("Does the product contain beef?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF)),};
 
     public static CQuestions[] forthSectionQuestions = new CQuestions[]{
         //Last course
         //Fruit
-        new CQuestions("Your product contains multiple fruits?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.MULTIPLE_FRUIT)),
-        new CQuestions("Your product is a pie?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.PIE)),
-        new CQuestions("Your fruit has a hard skin?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.HARD_SKIN)),
+        new CQuestions("Does your product contain multiple fruits?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.MULTIPLE_FRUIT)),
+        new CQuestions("Is your product a pie?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.PIE)),
+        new CQuestions("Does the fruit have a hard skin?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT, ProductAttribute.HARD_SKIN)),
         //new CQuestions("Your fruit is sour?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.FRUIT,ProductAttribute.SOUR)),
         //Ice cream
-        new CQuestions("Is your ice cream in a cone?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.ICE_CREAM, ProductAttribute.CONE)),
-        new CQuestions("Is your ice cream for people with celiac disease?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.ICE_CREAM, ProductAttribute.CELIAC)),
+        new CQuestions("Does the ice cream come in a cone?", ProductType.LAST_COURSE, Arrays.asList(ProductAttribute.ICE_CREAM, ProductAttribute.CONE)),
         //Complements
         // Potato
-        new CQuestions("The potatoes are Deluxe?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.DELUXE, ProductAttribute.VEGETABLES)),
+        new CQuestions("Are the potatoes Deluxe?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.POTATO, ProductAttribute.DELUXE, ProductAttribute.VEGETABLES)),
         //Chicken
-        new CQuestions("The product name has \"Share\"?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.SHARE)),
-        new CQuestions("It is ball shaped?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.BALL_SHAPED)),
-        new CQuestions("It has bones?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.BONE)),};
+        new CQuestions("Does the product name have \"Share\"?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.SHARE)),
+        new CQuestions("Does it come in a ball shaped form?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.BALL_SHAPED)),
+        new CQuestions("Does the product have bones in it?", ProductType.COMPLEMENT, Arrays.asList(ProductAttribute.CHICKEN, ProductAttribute.BONE)),
+        //Main Course
+        //SALADS
+        new CQuestions("Does it include cesar sauce?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.SALAD,ProductAttribute.CESAR)),
+        new CQuestions("Does it include mustard sauce?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.SALAD,ProductAttribute.MUSTARD)),
+      //BEEF
+        new CQuestions("Does your hamburger have mustard sauce in it?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF,ProductAttribute.MUSTARD)),
+        new CQuestions("Does the product have seed bread?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF,ProductAttribute.SEED_BREAD)),
+        new CQuestions("Does it include multiple slices of cheese?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.MULTIPLE_MEAT)),
+        new CQuestions("Does the product belong to the familly McExtreme?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF,ProductAttribute.MCEXTREME)),
+        new CQuestions("Does the product have BBQ sauce?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.BEEF,ProductAttribute.BBQ_SAUCE)),
+        //Chicken
+        new CQuestions("Does the product have seed bread?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN,ProductAttribute.SEED_BREAD)),
+        new CQuestions("Does the product belong to the familly McCrispy?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN,ProductAttribute.MCCRISPY)),
+        new CQuestions("Does the product have flat bread?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN,ProductAttribute.FLAT_BREAD)),
+        new CQuestions("Does the product have BBQ sauce?", ProductType.MAIN_COURSE, Arrays.asList(ProductAttribute.CHICKEN,ProductAttribute.BBQ_SAUCE)),
+    };
 
     public static CProducts selectedAttributes = new CProducts();
     public static CProducts notAttributes = new CProducts();
@@ -335,7 +355,7 @@ public class McAkinator {
                         break;
                     }
                 }
-                    System.out.println("\n");
+                    //System.out.println("\n");
                 
                 possibleProducts = aviableProducts(products, selectedAttributes, falseAttributes);
                 for (int i = 0; i < possibleProducts.length; i++) {
@@ -382,7 +402,7 @@ public class McAkinator {
                 hasThis = false;
             } // Ask an other question
             else if(avtQuestions.length >0) {
-                System.out.println("Possible Questions" + Arrays.toString(avtQuestions));
+                //System.out.println("Possible Questions" + Arrays.toString(avtQuestions));
                 // Rand number for the question
                 int numeroAleatorio;
                 do {
@@ -447,11 +467,11 @@ public class McAkinator {
       public static void main(String[] args) {
         // TODO code application logic here
         showQuestionV3(primarySectionQuestions, true, false, false, false);
-        System.out.println("\n secondary Section ------\n");
+        //System.out.println("\n secondary Section ------\n");
         showQuestionV3(secondarySectionQuestions, false, true, false, false);
-        System.out.println("\nthird Section ------ \n");
+        //System.out.println("\nthird Section ------ \n");
         showQuestionV3(thirdSectionQuestions, false, false, true, false);
-        System.out.println("\n Forth Section ------ \n");
+        //System.out.println("\n Forth Section ------ \n");
         showQuestionV3(forthSectionQuestions, false, false, false, true);
     }
 ;
