@@ -236,10 +236,10 @@ public class McAkinator {
             CProducts[] possibleProducts;
             //LLAMAMOS A QUE NOS DEN LOS POSIBLES PRODUCTOS
             
-            possibleProducts = aviableProducts(products, selectedAttributes, falseAttributes);
-            for (int i = 0; i < possibleProducts.length; i++) {
+            //possibleProducts = aviableProducts(products, selectedAttributes, falseAttributes);
+            /*for (int i = 0; i < possibleProducts.length; i++) {
                 System.out.println(" - " + i + ": " + possibleProducts[i].toString());
-            }
+            }*/
             
             if (filter1 == true) {
                   for (CQuestions question : filteredquestions) {
@@ -411,7 +411,7 @@ public class McAkinator {
 
                         boolean validAn = false;
                         do {
-                              System.out.println(avtQuestions[numeroAleatorio].getQuestionString());
+                              System.out.printf("  "+avtQuestions[numeroAleatorio].getQuestionString()+" ");
                               String answer = scanner.nextLine();
 
                               if (answer.toUpperCase().equals("Y")) {
@@ -426,7 +426,7 @@ public class McAkinator {
                               }
                               CProducts[] possibleProducts = aviableProducts(products, selectedAttributes, notAttributes);
                               if (possibleProducts.length == 1) {
-                                    System.out.println("Your product is " + possibleProducts[0].getName() + "!");
+                                    System.out.println("  ~ Your product is " + possibleProducts[0].getName() + "!");
                                     //hasThis=false;
                                     //System.exit(0);
                                    foundProduct=true;
@@ -439,9 +439,12 @@ public class McAkinator {
                         hasThis = false;
                         CProducts[] possibleProducts = aviableProducts(products, selectedAttributes, notAttributes);
                         if (possibleProducts.length == 1) {
-                              System.out.println("Your product is " + possibleProducts[0].getName() + "!");
+                              System.out.println("  ~ Your product is " + possibleProducts[0].getName() + "!");
                               foundProduct=true;
                               break;
+                        } else if (possibleProducts.length==0 && notFound == false){
+                              System.out.println("  ~ There's no product with those characteristics! :(");
+                              notFound = true;
                         }
                   }
             } while (hasThis == true);
@@ -465,12 +468,12 @@ public class McAkinator {
       }
 
       ;
-      
+      static boolean notFound=false;
       public static void main(String[] args) {
             // TODO code application logic here
             boolean stilPlaying = true;
             System.out.println("<McKinator/>");
-            System.out.println("*All the questions must be answered with Y/y (yes) or N/n (no)*");
+            System.out.println(" *All the questions must be answered with Y/y (yes) or N/n (no)*\n");
             while (stilPlaying == true) {
                   boolean founded;
                   founded=showQuestionV3(primarySectionQuestions, true, false, false, false);
@@ -482,7 +485,7 @@ public class McAkinator {
                   if(founded==false) showQuestionV3(forthSectionQuestions, false, false, false, true);
                   boolean validAnsw = false;
                   do {
-                        System.out.println("\nDo you want to play again?");
+                        System.out.printf("\n - Do you want to play again? ");
                         String answer = scanner.nextLine();
                         if (answer.toUpperCase().equals("N") || answer.toUpperCase().equals("Y")) {
                               if ("N".equals(answer.toUpperCase())) {
@@ -495,6 +498,7 @@ public class McAkinator {
                   if(stilPlaying==true) {
                         selectedAttributes = new CProducts();
                         notAttributes = new CProducts();
+                        notFound=false;
                   }
             }
       }
